@@ -33,7 +33,9 @@ class Replicator:
     self.ec2_dest = boto3.resource('ec2', region_name=self.AWS_DEST_REGION)
 
   def get_source_snapshots(self):
-    filters = [{'Name':'tag-key', 'Values': [self.REPLICATE_TAG]}]
+    filters = [
+      {'Name':'tag-key', 'Values': [self.REPLICATE_TAG]},
+      {'Name': 'status', 'Values': ['completed']}]
     snapshots = self.ec2_source.snapshots.filter(Filters=filters)
     return snapshots
 
