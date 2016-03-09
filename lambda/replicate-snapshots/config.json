@@ -1,0 +1,4 @@
+{
+  "AWS_SOURCE_REGION": "us-east-1",
+  "AWS_DEST_REGION": "us-west-2"
+}

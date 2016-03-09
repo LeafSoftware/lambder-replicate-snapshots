@@ -1,0 +1,7 @@
+{
+  "name": "replicate-snapshots",
+  "s3_bucket": "devopsbucket",
+  "timeout": 30,
+  "memory": 128,
+  "description": ""
+}
